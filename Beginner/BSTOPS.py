@@ -1,22 +1,11 @@
 class Node:
-    def __init__(self, value):
+    def __init__(self, value, pos):
         self.value = value
-    def addPos(self, pos):
         self.pos = pos
-    def addLeft(self, left):
-        self.left = left
-    def addRight(self, right):
-        self.right = right
+        self.left = None
+        self.right = None
 
-q = int(input())
-operations = [0 for i in range(q)]
-queries = [0 for i in range(q)]
+for t in range(int(input())):
+    oper,val = input().split()
 
-for i in range(q):
-    operations[i], queries[i] = input().split()
-queries = list(map(int, queries))
-
-for i, j in zip(operations, queries):
-    if i == 'i':
-        nval = Node(j)
         
